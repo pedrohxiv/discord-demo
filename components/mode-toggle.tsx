@@ -19,7 +19,7 @@ export const ModeToggle = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className="bg-transparent border-0 hover:bg-transparent"
+          className="bg-transparent border-0 hover:bg-zinc-900/10 dark:hover:bg-zinc-900/70 rounded-[24px] hover:rounded-[16px] transition"
           variant="outline"
           size="icon"
         >
@@ -28,7 +28,10 @@ export const ModeToggle = () => {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="dark:bg-[#1E1F22]">
+      <DropdownMenuContent
+        align="end"
+        className="text-xs font-medium text-black dark:text-neutral-400 space-y-[2px]"
+      >
         <DropdownMenuItem
           className="hover:cursor-pointer"
           onClick={() => setTheme("light")}
